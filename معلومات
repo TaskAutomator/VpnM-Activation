@@ -15,3 +15,10 @@
 عند الفتح سيفحص الرابط: https://raw.githubusercontent.com/TaskAutomator/VpnM-Activation/main/status.txt
 إذا كانت النتيجة KILLED، سيدمر البرنامج نفسه.
 إذا لم يكن هناك إنترنت (أو فشل الاتصال)، سيتم الدخول في "وضع عدم الاتصال" (Offline). وفي هذا الوضع سيتم تحديد مدة التفعيل بحد أقصى يوم واحد فقط بسلاسة تامة ودون إظهار أي رسالة للمستخدم، حتى لو اختار شهوراً.
+
+
+Verification Plan
+Offline Test: Disconnect internet, run generator, choose 1 month. The generated key should only be valid for 1 day.
+Online Test: Connect internet, have status.txt be ACTIVE. Choose 1 month. The key should be valid for 1 month.
+Kill Test: Change status.txt to KILLED. Run generator. It should self-destruct.
+
